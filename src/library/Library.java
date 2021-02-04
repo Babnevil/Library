@@ -38,14 +38,13 @@ public class Library {
         
     }
     public void add(Book book) {
-        if (books.length == 0)
-            books[0] = book;
+        if (books.length == numBooks)
+            grow();
         else {
             Book[] tempBag = new Book[numBooks + 1];
-            int length = numBooks + 1;
-            System.arraycopy(books, 0, tempBag, 0, length);
+            System.arraycopy(books, 0, tempBag, 0, numBooks + 1);
             books = tempBag;
-            books[length] = book;
+            books[numBooks] = book;
             numBooks +=1;
         }
     }
