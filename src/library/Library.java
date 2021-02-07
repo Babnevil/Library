@@ -14,19 +14,19 @@ public class Library {
     /**
      * @param args the command line arguments
      */
-    private Book[] books;   //array-based implementation of the bag data struct
-    private int numBooks;   // the number of books currently in the bag
+    private Book[] books = new Book[4];   //array-based implementation of the bag data struct
+    private int numBooks = 0;   // the number of books currently in the bag
     
     public Library() { } // default constructor to create an empty bag
     
     private int find(Book book) { // helper method to find a book in the bag
         int index = 0;
-        for (Book wanted : books){  //IMPLEMENT FOR REAL
+        for (Book wanted : books){  //NEEDS REAL SOLUTION
             if (wanted == book){
                 index = 1;
             }
             else
-                index = 2;
+                index = 1;
         }
         return index;
     } 
@@ -49,10 +49,12 @@ public class Library {
         }
     }
     //public boolean remove(Book book) { }
-    //public boolean cheackOut(Book book) { }
+    //public boolean checkOut(Book book) { }
     //public boolean returns(Book book) { }
     public void print() { }
-    public void printByDate() { }
+    public void printByDate() {
+        
+    }
     public void printByNumber() { }
     
 }

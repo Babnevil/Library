@@ -17,12 +17,12 @@ public class Date {
     
     public Date(String date) { 
         this.year = Integer.parseInt(date.substring(6));
-        this.month = Integer.parseInt(date.substring(3,4));
-        this.day = Integer.parseInt(date.substring(0,1));
+        this.day = Integer.parseInt(date.substring(3,4));
+        this.month = Integer.parseInt(date.substring(0,1));
     }
     public Date() { } //create an object with today's date (see Calendar class)
     
-    public boolean isValid() { 
+    public boolean isValid() { //NEEDS REAL SOLUTION
         if ( this.year < 1900 )
             return false;
         else
